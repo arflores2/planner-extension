@@ -1,0 +1,35 @@
+{
+  "manifest_version": 2,
+
+  "name": "Planner Extension",
+  "description": "Planner Extension, plan you night out!",
+  "version": "1.0",
+
+  "permissions": [
+    "http://code.jquery.com/jquery-1.10.0.js",
+
+    "https://maps.google.com/*",
+    "https://maps.googleapis.com/*",
+    "https://maps.gstatic.comi/*",
+    "contextMenus"
+  ],
+
+  "background": {
+    "scripts": [
+      "assets/js/lib/jquery.js",
+      "assets/js/util/helpers.js",
+      "assets/js/util/Observable.js",
+      "assets/js/background/view/ContextMenu.js",
+      "assets/js/background/view/BrowserAction.js",
+      "assets/js/background/controller/BackgroundController.js",
+      "assets/js/background/store/BufferStore.js",
+      "assets/js/background/background.js"
+    ],
+    "persistent": false
+  },
+
+  "browser_action": {
+    "default_icon": "assets/img/icon.png",
+    "default_popup": "map.html"
+  }
+}
